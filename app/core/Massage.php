@@ -13,7 +13,7 @@ use liw\app\core\web\Session;
 
 class Massage
 {
-    private static $massage;
+    private static $massage = [];
 
     public static function  getMassage($num, $massage, $url = null)
     {
@@ -52,9 +52,9 @@ class Massage
 //напрямую относится к getMassage без него он бесполезен
     private static function setMassage($massage,$num){
         if (is_array($massage)) {
-            foreach($massage as $its) {
-                Session::set(['Massage' => [$num => $its]]);
-            }
+
+            self::$massage['Massage'][$num] = $massage;
+            Session::set(self::$massage);
 
         }
         else{
