@@ -1,0 +1,20 @@
+{
+    "name": "pa-bil-sag/engine",
+    "description": "My engine",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mytnik Aleksey",
+            "email": "pa-bil-sag@yandex.by"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "liw\\":""
+
+        }
+    }
+}
