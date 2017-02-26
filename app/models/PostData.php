@@ -10,6 +10,7 @@ namespace liw\app\models;
 
 
 use liw\app\core\Massage;
+use liw\app\core\validation\Val;
 
 class PostData
 {
@@ -24,6 +25,8 @@ class PostData
         if (is_array($privates)) {
             foreach ($privates as $item => $value) {
                 if (isset($_POST[$item]) && !empty($_POST[$item])) {
+
+                    Val::validate($value,$item);
                     //проверяем через валидацию
 
                 } else {
@@ -38,7 +41,7 @@ class PostData
             }
         } else {
             if (isset($_POST[$privates]) && !empty($_POST[$privates])) {
-                //проверяем через валидацию
+                //проверяем есть ли такой пользователь в бд
 
 
             } else {

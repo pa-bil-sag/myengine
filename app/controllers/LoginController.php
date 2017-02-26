@@ -25,7 +25,7 @@ class LoginController extends Controller
         'username' =>[ 'min' => 3,
                        'max' => 30,
                        'pregmatch' => '~^[a-zA-Z0-9]+$~',
-                       'name' => 'логин'],
+                       'name' => 'Имя опльзователя'],
 
         'password' =>[ 'min' => 6,
                        'max' => 30,
